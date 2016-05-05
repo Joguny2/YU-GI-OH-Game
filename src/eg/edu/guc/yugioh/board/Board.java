@@ -104,13 +104,13 @@ public class Board
 		{
 			opponentButtons.get(i).setToolTipText(null);
 			//opponentButtons.get(i).setText("YugiOh");
-			opponentButtons.get(i).setIcon(new ImageIcon("Card Back.png"));
+			opponentButtons.get(i).setIcon(new ImageIcon("img/Card Back.png"));
 		}
 		for (int i=0;i<activeButtons.size();i++)
 		{
 			Card c = activePlayer.getField().getHand().get(i);
 			//activeButtons.get(i).setText(c.getName());
-			activeButtons.get(i).setIcon(new ImageIcon(c.getName()+".png"));
+			activeButtons.get(i).setIcon(new ImageIcon("img/"+c.getName()+".png"));
 			if (c instanceof SpellCard)
 				activeButtons.get(i).setToolTipText(c.getName());
 			else
@@ -210,7 +210,7 @@ public class Board
 		else{
 		Card c=active.getField().getGraveyard().get(size-1);
 		//b.setText(c.getName());
-		b.setIcon(new ImageIcon(c.getName()+".png"));
+		b.setIcon(new ImageIcon("img/"+c.getName()+".png"));
 		b.setToolTipText(c.getInfo());
 		}
 		size=opponent.getField().getGraveyard().size();
@@ -221,7 +221,7 @@ public class Board
 		else{
 		Card c1=opponent.getField().getGraveyard().get(size-1);
 		//b1.setText(c1.getName());
-		b1.setIcon(new ImageIcon(c1.getName()+".png"));
+		b1.setIcon(new ImageIcon("img/"+c1.getName()+".png"));
 		b1.setToolTipText(c1.getInfo());
 		}
 	}
